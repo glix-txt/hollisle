@@ -234,3 +234,30 @@ dialog form { text-align: right; margin-top: 1.3rem; }
   .player { padding: .9rem; gap: .8rem; }
   .play { width: 2.9rem; height: 2.9rem; }
 }
+
+/* ---------- leaderboard + credit (daily-board.js) ---------- */
+header > .icons { position: relative; z-index: 2; flex: none; display: flex; flex-direction: column; gap: .4rem; }
+@media (min-width: 560px) {
+  header > .icons { flex: 0 0 5.3rem; flex-direction: row; }
+  header > .icons:last-child { justify-content: flex-end; }
+}
+.icon svg { width: 15px; height: 15px; }
+.crowd { margin: .5rem 0 .1rem; font: 500 .68rem/1.5 var(--sans); letter-spacing: .14em; color: var(--red); }
+#lbDlg { width: min(420px, calc(100% - 2rem)); }
+#lbBody { max-height: 60vh; overflow-y: auto; }
+.lb-sub, .lb-dim { color: var(--soft) !important; font: italic 400 1.05rem var(--serif); }
+.lb-day { padding: .9rem 0; border-top: 1px solid var(--line); }
+.lb-day h3 { margin: 0; font: italic 400 1.4rem/1 var(--serif); display: flex; justify-content: space-between; align-items: baseline; }
+.lb-day h3 small { font: 500 .62rem var(--sans); letter-spacing: .2em; color: var(--faint); font-style: normal; }
+.lb-head { margin: .3rem 0 0 !important; font: 500 .66rem var(--sans); letter-spacing: .16em; color: var(--red) !important; }
+.lb-day .dist { margin-top: .6rem; gap: .25rem; }
+.credit { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .9rem;
+  max-width: 560px; margin: 3rem auto 2rem; padding: 0 1rem; font: italic 400 1.15rem var(--serif); color: var(--soft); }
+.credit b { font-weight: 600; color: var(--ink); }
+.credit .dc { display: inline-flex; align-items: center; gap: .45rem; padding: .4rem .9rem; background: transparent; color: var(--ink);
+  border: 1px solid var(--line-strong); border-radius: 999px; font: 500 .7rem var(--sans); letter-spacing: .12em; text-transform: none;
+  transition: background .2s, color .2s, border-color .2s; }
+.credit .dc svg { width: 15px; height: 15px; color: #5865f2; transition: color .2s; }
+.credit .dc:hover { background: #5865f2; border-color: #5865f2; color: #fff; }
+.credit .dc:hover svg { color: #fff; }
+.lb-day .dist i { min-width: 2.7rem; white-space: nowrap; }
